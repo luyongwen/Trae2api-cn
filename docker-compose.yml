@@ -1,10 +1,6 @@
 services:
   trae-cn-relay:
-    build:
-      context: .
-      args:
-        RELAY_BUILD_REVISION: "${RELAY_BUILD_REVISION:-local}"
-    image: trae-cn-relay:latest
+    image: "${GHCR_IMAGE:-ghcr.io/luyongwen/trae2api-cn}:${IMAGE_TAG:-latest}"
     container_name: trae-cn-relay
     restart: unless-stopped
     env_file:

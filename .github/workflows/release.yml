@@ -29,7 +29,7 @@ permissions:
 env:
   # GHCR repository names are lowercase even though GitHub's repository path
   # keeps the original casing.
-  IMAGE_NAME: ghcr.io/autumnsentiment/trae2api-cn
+  IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/trae2api-cn
 
 concurrency:
   group: release-${{ github.ref }}

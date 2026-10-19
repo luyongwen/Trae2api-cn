@@ -1,6 +1,6 @@
 services:
   trae-cn-relay:
-    image: ghcr.io/autumnsentiment/trae2api-cn:latest
+    image: "${GHCR_IMAGE:-ghcr.io/luyongwen/trae2api-cn}:${IMAGE_TAG:-latest}"
     container_name: trae-cn-relay
     restart: unless-stopped
     env_file:
